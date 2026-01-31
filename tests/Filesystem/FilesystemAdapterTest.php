@@ -219,7 +219,7 @@ class FilesystemAdapterTest extends TestCase
     public function testPutWithEnum()
     {
         $filesystemAdapter = new FilesystemAdapter($this->filesystem, $this->adapter);
-        $filesystemAdapter->put(, 'Something inside');
+        $filesystemAdapter->put(StoragePath::FILE, 'Something inside');
         $this->assertStringEqualsFile($this->tempDir.'/file.txt', 'Something inside');
     }
 
